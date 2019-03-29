@@ -151,23 +151,26 @@ services:
     source_battle:
         image: nginx:stable
         volumes:
-            - ../source/battle:/var/www/html
+            - /Library/WebServer/Documents/microservice/findGame/battle:/var/www/html
         command: "true"
 
     source_location:
         image: nginx:stable
         volumes:
-            - ../source/location:/var/www/html
+            - /Library/WebServer/Documents/microservice/findGame/location:/var/www/html
         command: "true"
 
     source_secret:
         image: nginx:stable
         volumes:
-            - ../source/secret:/var/www/html
+            - /Library/WebServer/Documents/microservice/findGame/secret:/var/www/html
         command: "true"
 
     source_user:
         image: nginx:stable
         volumes:
-            - ../source/user:/var/www/html
+            - /Library/WebServer/Documents/microservice/findGame/user:/var/www/html
         command: "true"
+
+
+        
